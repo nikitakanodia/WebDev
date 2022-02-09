@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARES SURVEY FORM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: auto;
+        }
+        #mainBox{
+            background-color: rgb(13, 8, 29,0.85);
+            height:700px;
+            width:550px;
+            border: 6px solid black;
+            padding: 28px 33px 28px 28px;
+            font-size:medium;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        button{
+            margin-bottom: 3px;
+            height: 40px;
+            width:490px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: rgb(0, 128, 0,0.7);
+            border-radius: 5px;
+            margin-top:1px;
+            margin-bottom: 10px;
+            font-family: 'Baloo Bhaijaan 2', cursive;
+        }
+        label,span{
+            color:whitesmoke;
+        }
+        body{
+            background-color: steelblue;
+            font-family: 'Baloo Bhaijaan 2', cursive;
+            background-image: url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_638523828_372214.jpg");
+            background-position:center;
+            background-size: cover;
+            background-repeat:no-repeat;
+            /* background-image: url("Ares logo.jpg");
+            background-repeat: repeat-x; */
+        }
+
+        h1{
+            /* color: rgb(108, 236, 103); */
+            width:350px;
+            padding-left: 12px;
+            margin-bottom: 2px;
+            font-weight:bolder;
+            
+            font-size:40px;
+            /* outline-width: 2px; */
+            /* outline-color: khaki; */
+            /* outline-color:rgb(5, 2, 14); */
+            -webkit-text-stroke: 0.1px khaki;
+            -webkit-text-fill-color: rgb(5, 2, 14);
+
+
+            /* -webkit-text-stroke-color:khaki; */
+        }
+
+        input,textarea,select{
+            width:490px;
+            margin-top:1px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            border-radius: 4.5px;
+        }
+        a{
+            background-color: blanchedalmond;
+            padding: 0px 5px 5px 5px;
+            border-radius:4.5px 4.5px 0px 0px ;
+            /* font-family: 'Baloo Bhaijaan 2', cursive; */
+            font-family: 'Acme', sans-serif;
+            /* margin-top: 20px; */
+
+            /* margin-top: 0px; */
+        }
+        
+    </style>
+</head>
+<body>
+    <h1> ARES Survey Form</h1>
+    
+    <form action="backend.php">
+        <div id="mainBox"> 
+            <span id="required" > * fields are required </span>  <br>
+
+            <label for="myName">NAME *</label>
+
+            <div> 
+                <input style="text-transform: capitalize ;" type="text" name="myName" required>
+            </div>
+
+            <label for="myEmail">EMAIL *</label>
+
+            <div>
+                <input type="email" name="myEmail" required>
+            </div>
+
+            <label for="myAge">AGE</label>
+            <span>(optional)</span>
+            <div>
+                <input type="number" name="myAge">
+            </div>
+            
+            <label for="myMob">Mobile Number (+91)</label>
+            <div>
+                <input type="tel" pattern="[0-9]{10}" maxlength="10" minlength="10" name="myMob">
+            </div>
+            
+
+
+            <label for="myRole" >Which option best describes your current role? * </label><br>
+
+            <div>
+                <select name="myRole" id="myRole" required>
+                    <option disabled="disabled" selected="selected">Choose an option</option >
+                    <option value="web" >Web Developer</option>
+                    <option value="android" >Android Developer</option>
+                    <option value="pr">PR</option>
+                    <option value="writer">Content Writer</option>
+                    <option value="design"> Graphic Designer</option>
+                </select>
+            </div> 
+
+            <label for="excites" >What is the one thing that excites you most about ARES? * </label>
+
+            <div>
+                <select name="excites" id="excites" required>
+                    <option disabled="disabled" selected="selected">Choose an option</option>
+                    <option value="robots" >Robots</option>
+                    <option value="mars" >Mars</option>
+                    <option value="space">Space</option>
+                    <option value="senior">Senior Interaction</option>
+                    <option value="fun">Fun</option>
+                </select>
+            </div> 
+
+            <label for="suggest" >Any comments or suggestions? </label>
+
+            <div>
+                <textarea  cols="60" rows="6" name="suggest" ></textarea>
+            </div> 
+
+            <button type="submit">SUBMIT NOW</button>
+            <a href="https://instagram.com/aresrobotics.nsut?utm_medium=copy_link" target="_blank">Click to visit our Instagram Handle </a> 
+            
+        </div> 
+    </form>    
+</body>
+</html>
